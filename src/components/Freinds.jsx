@@ -7,7 +7,7 @@ const TableRow = (props) => {
       <NavLink to = {"/profile/" +props.id }>{props.name} {props.lastName}</NavLink>
     </tr>
   );
-}
+} 
 
 export const Freinds = (props) => {
   let users = props.function ();

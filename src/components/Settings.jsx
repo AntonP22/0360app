@@ -36,7 +36,7 @@ const products = [
     color: 'Black',
   },
   // More products...
-]
+] 
 
 export  function Settings() {
   return (

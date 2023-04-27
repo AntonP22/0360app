@@ -1,5 +1,5 @@
 import textImg from "../assets/img/Left side.jpg";
-import backgroundImg from "../assets/img/sea.jpeg";
+import backgroundImg from "../assets/img/sea.jpeg"; 
 
 export const Messages = () => {
     return (
