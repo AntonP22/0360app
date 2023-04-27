@@ -2,8 +2,7 @@ const TableRow = (props) => {
   return (
     <tr>
       <th scope="row">{props.index + 1}</th>
-      <td>{props.name}</td>
-      <td>{props.lastName}</td>
+      <td>{props.name} {props.lastName}</td>
     </tr>
   );
 }
@@ -20,12 +19,11 @@ export const Freinds = (props) => {
   return (
     <div className="row">
       <div className="col-12">
-        <table className="table">
+        <table className="table table-bordered">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">Фамилия</th>
-              <th scope="col">Имя</th>
+              <th scope="col">№</th>
+              <th scope="col">Фамилия Имя</th>
             </tr>
           </thead>
           <tbody>
