@@ -10,13 +10,13 @@ const user = {
 };
 
 const users ={
-  0:{name:"Кристина", lastName:"Иванова", id: 4},
-  1:{name:"Ксения", lastName:"Чижикова", id: 6},
-  2:{name:"Сергей", lastName:"Петров", id: 7},
-  3:{name:"Диана", lastName:"Петрова", id: 16},
-  4:{name:"Антон", lastName:"Петров", id: 3},
-  5:{name:"Александр", lastName:"Иванов", id: 33},
-  6:{name:"Светлана", lastName:"солнцева", id: 90},
+  0:{name:"Кристина", lastName:"Иванова", id: 4, avatar : "https://picsum.photos/200"},
+  1:{name:"Ксения", lastName:"Чижикова", id: 6, avatar : "https://picsum.photos/200"},
+  2:{name:"Сергей", lastName:"Петров", id: 7, avatar : "https://picsum.photos/200"},
+  3:{name:"Диана", lastName:"Петрова", id: 16, avatar : "https://picsum.photos/200"},
+  4:{name:"Антон", lastName:"Петров", id: 3, avatar : "https://picsum.photos/200"},
+  5:{name:"Александр", lastName:"Иванов", id: 33, avatar : "https://picsum.photos/200"},
+  6:{name:"Светлана", lastName:"солнцева", id: 90, avatar : "https://picsum.photos/200"},
 }
 
 
