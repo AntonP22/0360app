@@ -1,31 +1,68 @@
 const user = {
-  name: "Иван",
-  lastName: "Иванов",
-  email: "ivan@ya.ru",
-  id: 1,
-  about:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores id provident neque praesentium rem consectetur vero amet optio, sint recusandae. Cum mollitia quod ut earum nobis eaque rem quaerat delectus!",
-  avatar:
-    "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=200&q=80",
+	name: "Иван",
+	lastname: "Иванов",
+	email: "ivanov@ya.ru",
+	id: 1,
+	about:
+		"Учитывая ключевые сценарии поведения, перспективное планирование напрямую зависит от поставленных обществом задач! Но предприниматели в сети интернет и по сей день остаются уделом либералов, которые жаждут быть описаны максимально подробно.",
+	avatar:
+		"https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=200&q=80",
 };
 
-const users ={
-  0:{name:"Кристина", lastName:"Иванова", id: 4, avatar : "https://picsum.photos/200"},
-  1:{name:"Ксения", lastName:"Чижикова", id: 6, avatar : "https://picsum.photos/200"},
-  2:{name:"Сергей", lastName:"Петров", id: 7, avatar : "https://picsum.photos/200"},
-  3:{name:"Диана", lastName:"Петрова", id: 16, avatar : "https://picsum.photos/200"},
-  4:{name:"Антон", lastName:"Петров", id: 3, avatar : "https://picsum.photos/200"},
-  5:{name:"Александр", lastName:"Иванов", id: 33, avatar : "https://picsum.photos/200"},
-  6:{name:"Светлана", lastName:"солнцева", id: 90, avatar : "https://picsum.photos/200"},
-}
-
-
+// const users = {
+// 	0: {
+// 		name: "Кристина",
+// 		lastname: "Иванова",
+// 		id: 4,
+// 		avatar: "https://source.unsplash.com/random/?user&w=200",
+// 	},
+// 	1: {
+// 		name: "Ксения",
+// 		lastname: "Чижикова",
+// 		id: 6,
+// 		avatar: "https://source.unsplash.com/random/?user&w=200",
+// 	},
+// 	2: {
+// 		name: "Диана",
+// 		lastname: "Петрова",
+// 		id: 7,
+// 		avatar: "https://source.unsplash.com/random/?user&w=200",
+// 	},
+// 	3: {
+// 		name: "Сергей",
+// 		lastname: "Петров",
+// 		id: 16,
+// 		avatar: "https://source.unsplash.com/random/?user&w=200",
+// 	},
+// 	4: {
+// 		name: "Александр",
+// 		lastname: "Солнцев",
+// 		id: 3,
+// 		avatar: "https://source.unsplash.com/random/?user&w=200",
+// 	},
+// 	5: {
+// 		name: "Светлана",
+// 		lastname: "Солнцева",
+// 		id: 33,
+// 		avatar: "https://source.unsplash.com/random/?user&w=200",
+// 	},
+// 	6: {
+// 		name: "Александра",
+// 		lastname: "Николаева",
+// 		id: 90,
+// 		avatar: "https://source.unsplash.com/random/?user&w=200",
+// 	},
+// };
+let users = [];
 export function getUser(userId) {
-  for(let i = 0; i < Object.keys(users).length; i++) {
-  if (users[i].id == userId) return users[i];
-  }
-  return user;
+	for (let i = 0; i < users.length; i++) {
+		if (users[i].id == userId) return users[i];
+	}
+	return user;
 }
-export function getUsers(){
-  return users;
+export async function getUsers() {
+let response = await fetch("https://0360.napli.ru/getUsers");
+	users = await response.json();
+
+	return users;
 }
